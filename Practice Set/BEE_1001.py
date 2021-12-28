@@ -17,7 +17,7 @@
 
 # print("X = "+X+"\n")
 # print(f"X = {X}\n")
-# print("X"+" "+"="+" "+X+"\n")
+# print("X"+" "+"="+" "+X+"\n")#new line is printed by default that's why no need to write \n
 
 a=int(input())
 b= int(input())
