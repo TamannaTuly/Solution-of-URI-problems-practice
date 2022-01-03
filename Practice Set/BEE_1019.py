@@ -12,5 +12,6 @@ duration = int(input())
 hr = int(duration/3600)
 min = int(duration/60)
 sec = duration - (min*60)
+min = min - (hr*60)
 
 print(f'{hr}:{min}:{sec}')
