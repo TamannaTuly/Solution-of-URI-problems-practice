@@ -8,6 +8,14 @@
 # Output
 # Print the minimum quantity of banknotes and coins necessary to change the initial value, as the given example.
 userInput = float(input())
+realNumberINt = int(userInput)
+userInputF = userInput - float(realNumberINt)
+finalFLoat = float(userInputF)
+# finalFLoat = float("{:.2f}".format(userInputF))
+# print(type(finalFLoat))
+# print(finalFLoat)
+# # print(type(userInputF))
+# # print(userInputF)
 note100 = 100
 note50 = 50
 note20 = 20
@@ -15,15 +23,16 @@ note10 = 10
 note5 = 5
 note2 = 2
 
-note1 = 1
+note1 = 1.00
 note050 = 0.50
 note025 = 0.25
 note010 = 0.10
 note005 = 0.05
 note001 = 0.01
 
-realNumberINt = int(userInput)
-realNumberfloat = userInput - float(realNumberINt)
+# realNumberINt = int(userInput)
+# realNumberfloat = userInput - float(realNumberINt)
+
 
 if realNumberINt >= note100 :
     countNote100 = int(realNumberINt/ note100)
@@ -72,14 +81,52 @@ if realNumberINt >= note2:
 else:
     countNote2 = 0
 
-if realNumberINt >= note1:
-    countNote1 = int(realNumberINt/ note1)
-    realNumberINt = realNumberINt-(note1*countNote1)
+finalFLoat = float(realNumberINt)+finalFLoat
+
+if finalFLoat >= note1:
+    countNote1 = int(finalFLoat/ note1)
+    finalFLoat = finalFLoat-(note1*countNote1)
     # print(countnote7)
     # print(realNumber)
 else:
     countNote1 = 0
+# print(realNumberINt)
+if finalFLoat >= note050:
+    countNote050 = int(finalFLoat/ note050)
+    finalFLoat = finalFLoat-(note050*countNote050)
+    # print(countnote7)
+    # print(realNumber)
+else:
+    countNote050 = 0
+
+if finalFLoat >= note025:
+    countNote025 = int(finalFLoat / note025)
+    finalFLoat = finalFLoat - (note025 * countNote025)
+else:
+    countNote025 = 0
+
+if finalFLoat >= note010:
+    countNote010 = int(finalFLoat / note010)
+    finalFLoat = finalFLoat - (note010 * countNote010)
+else:
+    countNote010 = 0
+
+if finalFLoat >= note005:
+    countNote005 = int(finalFLoat / note005)
+    finalFLoat = finalFLoat - (note005 * countNote005)
+else:
+    countNote005 = 0
+
+if finalFLoat >= note001:
+    countNote001 = int(finalFLoat / note001)
+    finalFLoat = finalFLoat - (note001 * countNote001)
+else:
+    countNote001 = 0
+
+print(f'NOTAS:\n{countNote100} nota(s) de R$ 100.00\n{countNote50} nota(s) de R$ 50.00\n{countNote20} nota(s) de R$ 20.00\n{countNote10} nota(s) de R$ 10.00\n{countNote5} nota(s) de R$ 5.00\n{countNote2} nota(s) de R$ 2.00\nMOEDAS:\n{countNote1} moeda(s) de R$ 1.00\n{countNote050} moeda(s) de R$ 0.50\n{countNote025} moeda(s) de R$ 0.25\n{countNote010} moeda(s) de R$ 0.10\n{countNote005} moeda(s) de R$ 0.05\n{countNote001} moeda(s) de R$ 0.01')
 
 # realNumberfloat = userInput - float(realNumberINt)
 
-print(f'{countNote100}\n{countNote50}\n{countNote20}\n{countNote10}\n{countNote5}\n{countNote2}\{countNote1}\n{realNumberfloat}')
+# print(f'{countNote100}\n{countNote50}\n{countNote20}\n{countNote10}\n{countNote5}\n{countNote2}\n{countNote1}\n')
+
+
